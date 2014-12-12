@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TDDC73_lab2_2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="Black">#000000</color>
+    <color name="ExpandChildBackground">#FFAFABAB</color>
+    <color name="ExpandGroupBackground">#FF7C7C7C</color>
+    <color name="ClickedItem">#71B3EE</color>
+    <color name="NoSuccess">#EE0000</color>
+    <color name="Success">#FFFFFF</color>
+
+    <string-array name="groupNames">
+        <item>Förnamn</item>
+        <item>Mellannamn</item>
+        <item>Efternamn</item>
+    </string-array>
+
+</resources>
