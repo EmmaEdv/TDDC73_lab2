@@ -47,7 +47,6 @@ public class MyActivity extends Activity {
         TextField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-                //Log.e("Will write ", "  text");
             }
 
             @Override
@@ -69,7 +68,6 @@ public class MyActivity extends Activity {
 
                         TextField.setBackgroundResource(R.color.Success);
 
-                        //Ugly hack
                         if((groupNames[0].toString().toLowerCase()).equals(groupString)) {
                             TextField.setBackgroundResource(R.color.Success);
                             //Expand the group
@@ -113,7 +111,6 @@ public class MyActivity extends Activity {
                             ExpandList.expandGroup(1);
 
                             groupId = 1;
-
 
                             if((midNames[0].toString().toLowerCase()).contains(childString)) {
                                 //Select the correct child.....
@@ -178,12 +175,7 @@ public class MyActivity extends Activity {
                     }
                     else{
                         TextField.setBackgroundResource(R.color.NoSuccess);
-                        /*ExpandList.collapseGroup(0);
-                        ExpandList.collapseGroup(1);
-                        ExpandList.collapseGroup(2);*/
                     }
-
-
                 }
                 else {
                     if((Arrays.asList(groupNames).toString().toLowerCase()).contains(inputString)){
@@ -219,7 +211,6 @@ public class MyActivity extends Activity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                //Log.e("Wrote ", " a text");
             }
         });
 
@@ -250,9 +241,6 @@ public class MyActivity extends Activity {
 
                 path = groupPath.concat(path);
                 TextField.setText(path, TextView.BufferType.EDITABLE);
-//                childId = (int) chdId;
-//Log.e("On child click", ""+childId);
-//                ExpAdapter.setIds(groupId, childId);
 
                 return true;
             }
@@ -267,17 +255,14 @@ public class MyActivity extends Activity {
         group1.setName(groupNames[0]);
         ExpandListChild child1_1 = new ExpandListChild();
         child1_1.setName(firstNames[0]);
-        child1_1.setTag(null);
         list2.add(child1_1);
 
         ExpandListChild child1_2 = new ExpandListChild();
         child1_2.setName(firstNames[1]);
-        child1_2.setTag(null);
         list2.add(child1_2);
 
         ExpandListChild child1_3 = new ExpandListChild();
         child1_3.setName(firstNames[2]);
-        child1_3.setTag(null);
         list2.add(child1_3);
 
         group1.setItems(list2);
@@ -288,17 +273,14 @@ public class MyActivity extends Activity {
         group2.setName(groupNames[1]);
         ExpandListChild child2_1 = new ExpandListChild();
         child2_1.setName(midNames[0]);
-        child2_1.setTag(null);
         list2.add(child2_1);
 
         ExpandListChild child2_2 = new ExpandListChild();
         child2_2.setName(midNames[1]);
-        child2_2.setTag(null);
         list2.add(child2_2);
 
         ExpandListChild child2_3 = new ExpandListChild();
         child2_3.setName(midNames[2]);
-        child2_3.setTag(null);
         list2.add(child2_3);
 
         group2.setItems(list2);
@@ -309,17 +291,14 @@ public class MyActivity extends Activity {
         group3.setName(groupNames[2]);
         ExpandListChild child3_1 = new ExpandListChild();
         child3_1.setName(lastNames[0]);
-        child3_1.setTag(null);
         list2.add(child3_1);
 
         ExpandListChild child3_2 = new ExpandListChild();
         child3_2.setName(lastNames[1]);
-        child3_2.setTag(null);
         list2.add(child3_2);
 
         ExpandListChild child3_3 = new ExpandListChild();
         child3_3.setName(lastNames[2]);
-        child3_3.setTag(null);
         list2.add(child3_3);
 
         group3.setItems(list2);
@@ -330,16 +309,4 @@ public class MyActivity extends Activity {
 
         return list;
     }
-
-    public static void checkString(CharSequence charSeq, int theCase){
-        //child true = child, false = group
-
-        switch (theCase){
-            case 1:
-            case 2:
-            case 3:
-        }
-
-    }
-
 }
